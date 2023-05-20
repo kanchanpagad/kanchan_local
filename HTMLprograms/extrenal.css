@@ -1,0 +1,27 @@
+h1,h2{
+    
+    background-color: blueviolet;
+}
+/*syntax: class selector:.(period operator) class_name{
+    peoparty:value;
+}*/
+.container{
+    color: blueviolet;
+}
+
+.main-container{
+    
+    border: 5px solid rgb(120, 83, 151);
+    background-color: blueviolet;
+    width: 90;
+    overflow: auto;
+}
+
+.control{
+     border: 6px solid rgb(120, 83, 151);
+     background-color: rgb(9, 200, 31);
+     width: 45;
+     word-wrap: ;
+
+}
+
