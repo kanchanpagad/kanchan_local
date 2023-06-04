@@ -1,11 +1,23 @@
-.container{
-    font-weight: 400;
-    color: blue;
-    text-decoration: underline wavy coral ;
-    font-style: italic ;
-    font-size: xx-large;
-     background-color: aqua;
-     padding: left 200px;
+.heading-main {
+    color: blueviolet;
+    font-size: 30px;
+    text-shadow: 4px 4px 4px red;
+}
 
+.div-container {
+    border: 1px solid orchid;
+    width: 200px;
+    padding: 10px;
+    background-color: aquamarine;
+    margin: auto;
+}
 
+.h1-container {
+    color: yellow;
+    font-size: 30px;
+}
+
+.fname {
+    color: brown;
+    font-size: 30px;
 }
