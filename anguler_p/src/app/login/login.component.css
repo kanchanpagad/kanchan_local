@@ -1,0 +1,36 @@
+.container{
+    background-color: aquamarine;
+    height: 1000px;
+   width: 100;
+   
+}
+.heading{
+    text-align: center;
+
+}
+.form-container{
+
+    text-align: center;
+    margin: auto;
+    border: 1px solid black;
+    height: 400px;
+    width: 300px;
+    background-color: antiquewhite;
+}
+.lal{
+    font-size: 20px;
+    padding:5px;
+}
+.inp-box{
+
+    padding: 5px;
+    margin-top: 10px;
+
+}
+.submit-btn{
+    background-color: brown;
+    border: none;
+    padding: 3px 3px;
+    position: relative;
+    top:51px
+}
