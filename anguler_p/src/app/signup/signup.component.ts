@@ -1,5 +1,6 @@
+import { group } from '@angular/animations';
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import{ FormGroup,FormBuilder,Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-signup',
@@ -7,9 +8,30 @@ import { Router } from '@angular/router';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent {
+  signUpForm!: FormGroup ;
+  //name:string='kanchan';
+  //name! : string;
+  
+  
+  constructor( private formBuilder : FormBuilder){}
+  
+  
+  
+  ngOnInIt(){
+    this.singUpFormVControlls();
+      
+  }
+
+singUpFormVControlls(){
+this.signUpForm =this.formBuilder.group({
+   name : ['',[Validators.required,Validators.pattern("[a-zA-Z]*$"),Validators.minLength(10)]],
+   email : [''],
+   contacts : [''],
+   address : [''],
+   gender : [''],
 
 
-
-
+})
+}
 
 }

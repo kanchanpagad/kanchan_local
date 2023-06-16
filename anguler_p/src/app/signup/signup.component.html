@@ -1,18 +1,27 @@
 <p>signup works!</p>
-<div class="hedimg_from">
-    
-    <h2>Signup Form</h2>
-    <form class="cas"> 
-    
-    <label>Name</label>
-    <input type="text"><br><br>
-    <label>Email</label>
-    <input type="text"><br><br>
-    <label>Contacts</label>
-    <input type="text"><br><br>
-    <label> Address</label>
-    <input type="text"><br><br>
-    <button>submit</button>
-
+<div>
+    <h2 class="cas">Signup Form</h2>
+    <form class="hedimg_from"  [formGroup]="signUpForm"> 
+     <label>Name</label><br>
+    <input type="text" formControlName="name"placeholder="Enter your name" ><br>
+    <span class="err" *ngIf="signUpForm.get('name')?.errors?.['required'] && signUpForm.get('name')?.touched">
+        Name is required
+    </span>
+    <span class="err" *ngIf="signUpForm.get('name')?.errors?.['pattern']">
+        Please Enter Valid Name
+    </span><br>
+    <label>Email</label><br>
+    <input type="text" formControlName="email"><br>
+    <label>Contacts</label><br>
+    <input type="text" formControlName="contacts"><br>
+    <label> Address</label><br> 
+    <input type="text" formControlName="address"><br> <br>
+    <label>Gender</label><br>
+    <input type="radio" formControlName="gender">Male <br>
+    <br>
+    <button [disabled]="!signUpForm.valid"> Submit </button>
     </form>
-</div>
+</div> 
+
+
+
