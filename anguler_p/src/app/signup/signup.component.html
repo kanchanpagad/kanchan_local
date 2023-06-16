@@ -3,7 +3,7 @@
     <h2 class="cas">Signup Form</h2>
     <form class="hedimg_from"  [formGroup]="signUpForm"> 
      <label>Name</label><br>
-    <input type="text" formControlName="name"placeholder="Enter your name" ><br>
+    <input type="text" formControlName="name"placeholder="Enter your name" >,mm
     <span class="err" *ngIf="signUpForm.get('name')?.errors?.['required'] && signUpForm.get('name')?.touched">
         Name is required
     </span>
