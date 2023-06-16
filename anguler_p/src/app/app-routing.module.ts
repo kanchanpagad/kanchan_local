@@ -7,6 +7,7 @@ import { SignupComponent } from './signup/signup.component';
 import { SigninComponent } from './signin/signin.component';
 import { AppComponent } from './app.component';
 import { UserModule } from './user/user.module';
+import { DirectivesInAngularComponent } from './directives-in-angular/directives-in-angular.component';
 
 const routes: Routes = [
   {path :'',component :LandingComponent},
@@ -14,12 +15,13 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'signup',component:SignupComponent},
   {path:'signin',component: SigninComponent},
-  {path:'user',loadChildren:()=>import('./user/user.module').then(mod=>mod.UserModule)}
+  {path:'user',loadChildren:()=>import('./user/user.module').then(mod=>mod.UserModule)},
+  { path : 'directives', component: DirectivesInAngularComponent},
   
 ]; 
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes)],  
   exports: [RouterModule],
 })
 export class AppRoutingModule { }

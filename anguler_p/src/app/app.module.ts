@@ -6,6 +6,8 @@ import { LandingComponent } from './landing/landing.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { SigninComponent } from './signin/signin.component';
+import { DirectivesInAngularComponent } from './directives-in-angular/directives-in-angular.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -15,11 +17,14 @@ import { SigninComponent } from './signin/signin.component';
     LandingComponent,
     LoginComponent,
     SignupComponent,
-    SigninComponent
+    SigninComponent,
+    DirectivesInAngularComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -25,12 +25,16 @@ signin(){
   this.router.navigateByUrl('/signin')
   
 }
+
 userActivity(){
   this. router.navigateByUrl('/user/userActivity')
 }
  userdemo(){
   this.router.navigateByUrl('/user/userdemo')
  }
+ directives(){
+  this.router.navigateByUrl('directives');
+}
 
 
 

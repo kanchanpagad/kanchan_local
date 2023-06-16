@@ -7,6 +7,7 @@ describe('LandingComponent', () => {
   let fixture: ComponentFixture<LandingComponent>;
 
   beforeEach(() => {
+    
     TestBed.configureTestingModule({
       declarations: [LandingComponent]
     });
