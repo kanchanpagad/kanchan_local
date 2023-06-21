@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-landing',
@@ -7,11 +8,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./landing.component.css']
 })
 export class LandingComponent {
-  constructor(private router :Router){
+  uName!:string;
+  constructor(private router :Router, private dataService:DataService ){
+
 
   }
+  ngOnInit(){
+   this.uName = this.dataService.userName;
+  }
   landing(){
-    this.router.navigateByUrl('/landing')
+    this.router.navigateByUrl('landing')
   }
   
 login(): void{

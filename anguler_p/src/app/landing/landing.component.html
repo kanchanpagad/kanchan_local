@@ -1,8 +1,10 @@
 
 <div class="parent">
-    <h1 class="heading">My Application</h1>
+
+    <h1 class="heading"  *ngIf="!uName">wel-come {{uName}},</h1>
+     <h1 class="heading"  *ngIf="uName">My Application</h1> 
     <button (click)="landing()" class="btn-login">landing</button>
-    <button (click)="login()" class="btn-login">login</button>&nbsp;
+    <button (click)="login()" class="btn-login">login</button>&nbsp;  
      <button (click)="signup()" class ="btn-login">signup</button>
      <!--  <button routerLink="/signup" class="btn-login">signup</button>  -->
      <button (click)="signin()" class="btn-login">signin</button>

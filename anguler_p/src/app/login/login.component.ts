@@ -7,17 +7,25 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  constructor(private router:Router){
+  gender ='male'
+    constructor(private router:Router){
 
- }
+    }
 
-back(){
-  this.router.navigateByUrl('landing');
+  back(){
+    this.router.navigateByUrl('landing');
+  }
+
+  submit(formData:any){
+    console.log(formData);
+    
+  }
+  password(passwordValue:any){
+   console.log(passwordValue);
+   
+  }
+
 }
 
-submit(formData:any){
-  console.log(formData);
-  
-}
 
-}
+

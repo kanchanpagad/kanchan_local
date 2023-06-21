@@ -1,6 +1,7 @@
-import { group } from '@angular/animations';
 import { Component } from '@angular/core';
 import{ FormGroup,FormBuilder,Validators} from '@angular/forms';
+import { DataService } from '../data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -8,30 +9,59 @@ import{ FormGroup,FormBuilder,Validators} from '@angular/forms';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent {
-  signUpForm!: FormGroup ;
-  //name:string='kanchan';
-  //name! : string;
-  
-  
-  constructor( private formBuilder : FormBuilder){}
-  
-  
-  
-  ngOnInIt(){
-    this.singUpFormVControlls();
-      
+  signUpForm! :FormGroup
+  //name:string = 'poonam';
+  //name!:string;
+  student = {
+   name: 'poonam',
+   age:30
   }
 
-singUpFormVControlls(){
-this.signUpForm =this.formBuilder.group({
-   name : ['',[Validators.required,Validators.pattern("[a-zA-Z]*$"),Validators.minLength(10)]],
-   email : [''],
-   contacts : [''],
-   address : [''],
-   gender : [''],
+  constructor(private fb: FormBuilder , private dataService : DataService ,  private router:Router){}
+
+   ngOnInit(){
+    this.formDef()
+      
+
+      
+   }
+
+    formDef(): void{
+       this.signUpForm = this.fb.group({
+         fullName : ['',[Validators.required, Validators.pattern("[a-zA-Z ]*$"),Validators.minLength(10)]],
+         mobNo:['',[Validators.pattern("[0-9]*$"),Validators.minLength(10),Validators.maxLength(10)]],
+         email:[],
+         userName:[],
+         city:[],
+         address:[],
+         gender:['Female']
+       })
+       }
+
+     submit(){
+       console.log(this.signUpForm.value);
+       this.dataService.userName = this.signUpForm.value.fullName;
+       console.log(this.signUpForm.value);
+       this.router.navigateByUrl('landing');
 
 
-})
+      
+    
+    
+
+
+      
+     }
+
+
+
+
+
+
+
+
+
 }
 
-}
+  
+
