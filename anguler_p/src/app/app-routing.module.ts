@@ -10,7 +10,7 @@ import { DirectivesInAngularComponent } from './directives-in-angular/directives
 
 const routes: Routes = [
   {path :'',component :LandingComponent},
-  {path: 'landing',component:LeadingComment},
+  {path: 'landing',component:LandingComponent},
   {path:'login',component:LoginComponent},
   {path:'signup',component:SignupComponent},
   //{path:'signin',component: SigninComponent},

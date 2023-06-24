@@ -17,7 +17,9 @@ export class SignupComponent {
    age:30
   }
 
-  constructor(private fb: FormBuilder , private dataService : DataService ,  private router:Router){}
+  constructor(private fb: FormBuilder , 
+              private dataService : DataService , 
+              private router : Router){}
 
    ngOnInit(){
     this.formDef()
@@ -41,7 +43,7 @@ export class SignupComponent {
      submit(){
        console.log(this.signUpForm.value);
        this.dataService.userName = this.signUpForm.value.fullName;
-       console.log(this.signUpForm.value);
+      
        this.router.navigateByUrl('landing');
 
 
