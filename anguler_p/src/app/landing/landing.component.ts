@@ -9,12 +9,15 @@ import { DataService } from '../data.service';
 })
 export class LandingComponent {
   uName!:string;
-  constructor(private router :Router, private dataService:DataService ){
+  list!:any;
+  constructor(private router :Router, 
+    private dataService:DataService ){
 
 
   }
   ngOnInit(){
    this.uName = this.dataService.userName;
+   this.list=this.dataService.listData
   }
   landing(){
     this.router.navigateByUrl('landing')
@@ -41,7 +44,15 @@ userActivity(){
  directives(){
   this.router.navigateByUrl('directives');
 }
-
+lifeCycleHooks(){
+  this. router.navigateByUrl('lifecyclehook')
+}
+parent(){
+  this.router.navigateByUrl('parent');
+}
+child(){
+  this.router.navigateByUrl('child');
+}
 
 
 

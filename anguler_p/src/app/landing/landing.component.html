@@ -1,8 +1,8 @@
 
 <div class="parent">
-
-    <h1 class="heading"  *ngIf="!uName">wel-come {{uName}},</h1>
-     <h1 class="heading"  *ngIf="uName">My Application</h1> 
+    <h1 class="heading"  *ngIf="!uName">My Application</h1> 
+    <h1 class="heading"  *ngIf="uName">wel-come {{uName}},</h1>
+     
     <!-- <button (click)="landing()" class="btn-login">landing</button> -->
     <button (click)="login()" class="btn-login">login</button>&nbsp;
      <button (click)="signup()" class ="btn-login">signup</button>
@@ -13,10 +13,12 @@
      <button routerLink="/user/userdemo" class="btn-login">userdemo</button> 
      <button (click)="directives()" class="btn-login">Directives</button>
      <!-- <button (click)="submit()" class="btn-login">submit</button> -->
-     
+     <button (click)="lifeCycleHooks()" class="btn-login">lifeCycleHooks</button>
+     <button (click)="parent()"  class="btn-login"> Parent </button>
+    <button (click)="child()"  class="btn-login">child</button>
      
      
     
     
-</div>
-
+</div><br><br>
+<div>{{list}}</div>

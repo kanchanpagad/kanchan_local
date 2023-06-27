@@ -13,16 +13,25 @@ export class SignupComponent {
   //name:string = 'poonam';
   //name!:string;
   student = {
-   name: 'poonam',
-   age:30
+   name:'poonam',
+   age:30,
   }
+  data: any;
+  studentDataService: any;
+  
+
 
   constructor(private fb: FormBuilder , 
               private dataService : DataService , 
               private router : Router){}
 
-   ngOnInit(){
-    this.formDef()
+  
+    ngOnInit(){
+      this.formDef();
+      this.dataService.studentData =  this.student; //set student obj to service property studentData
+       this.data  = this.studentDataService.data;
+       console.log(" this.data  >>", this.data  );
+       
       
 
       
@@ -43,6 +52,7 @@ export class SignupComponent {
      submit(){
        console.log(this.signUpForm.value);
        this.dataService.userName = this.signUpForm.value.fullName;
+       this.dataService.listData=['kanchan','revati','rohini','rima']
       
        this.router.navigateByUrl('landing');
 

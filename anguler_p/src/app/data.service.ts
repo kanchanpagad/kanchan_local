@@ -5,5 +5,11 @@ import { Injectable } from '@angular/core';
 })
 export class DataService {
   userName:string ='ppp';
+  listData:any;
+  studentData: { name: string; age: number; } | undefined;
+  setData!: string;
+
+  constructor() { }
+  
 }
   

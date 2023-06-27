@@ -8,7 +8,9 @@ import { SignupComponent } from './signup/signup.component';
 //import { SigninComponent } from './signin/signin.component';
 import { DirectivesInAngularComponent } from './directives-in-angular/directives-in-angular.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { LifecycleHookComponent } from './lifecycle-hook/lifecycle-hook.component';
+import { LifecyclehookComponent } from './lifecyclehook/lifecyclehook.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 
 
@@ -18,9 +20,11 @@ import { LifecycleHookComponent } from './lifecycle-hook/lifecycle-hook.componen
     LandingComponent,
     LoginComponent,
     SignupComponent,
-   // SigninComponent,
     DirectivesInAngularComponent,
-   LifecycleHookComponent
+    LifecyclehookComponent,
+    ParentComponent,
+    ChildComponent,
+   
   ],
   imports: [
     BrowserModule,
