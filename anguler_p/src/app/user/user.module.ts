@@ -5,19 +5,25 @@ import { UserRoutingModule } from './user-routing.module';
 import {UserActivityComponent } from './user-activity/user-activity.component';
 import { UserdemoComponent } from './userdemo/userdemo.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
- console.log('user module');
+import{HttpClientModule} from'@angular/common/http';
+import { ApicallComponent } from './apicall/apicall.component';
+ 
 
 
 
 @NgModule({
   declarations: [
     UserActivityComponent,
-    UserdemoComponent
+    UserdemoComponent,
+    ApicallComponent
   ],
   imports: [
     CommonModule,
     UserRoutingModule,
     FormsModule,ReactiveFormsModule,
+    HttpClientModule,
+
+    
   ]
 })
 export class UserModule { }

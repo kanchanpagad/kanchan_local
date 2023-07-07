@@ -1,0 +1,128 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode",
+      "num": "kanchan",
+      "address": "solsapur"
+    },
+    {
+      "title": "test",
+      "author": "jon",
+      "name": "kanchan",
+      "address": "solapur",
+      "id": 2
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1,
+      "mobile no": "555130356"
+    },
+    {
+      "title": "test",
+      "author": "jon",
+      "name": "kanchan",
+      "address": "solapur",
+      "mobile": "02164694889",
+      "id": 2
+    }
+  ],
+  "profile": {
+    "fullName": "revati pagad",
+    "mobNo": "7387132298",
+    "email": "kanchanpagad111@gmail.com",
+    "userName": null,
+    "city": "solapur",
+    "address": "solapur",
+    "gender": "Female"
+  },
+  "admin": [
+    {
+      "title": "test",
+      "author": "jon",
+      "name": "kanchan",
+      "address": "solapur"
+    }
+  ],
+  "studentName": [
+    {
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "id": 5
+    },
+    {
+      "id": 6
+    },
+    {
+      "id": 7
+    },
+    {
+      "id": 8
+    },
+    {
+      "id": 9
+    },
+    {
+      "id": 10
+    },
+    {
+      "id": 11
+    },
+    {
+      "id": 12
+    },
+    {
+      "id": 13
+    },
+    {
+      "id": 14
+    },
+    {
+      "id": 15
+    },
+    {
+      "id": 16
+    },
+    {
+      "id": 17
+    },
+    {
+      "id": 18
+    },
+    {
+      "id": 19
+    },
+    {
+      "id": 20
+    },
+    {
+      "id": 21
+    },
+    {
+      "studentName": "llllll",
+      "id": 22
+    },
+    {
+      "studentName": "mmk",
+      "id": 23
+    },
+    {
+      "studentName": "mmk",
+      "id": 24
+    }
+  ]
+}

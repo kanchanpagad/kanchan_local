@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
-//import { SigninComponent } from './signin/signin.component';
 import { DirectivesInAngularComponent } from './directives-in-angular/directives-in-angular.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LifecyclehookComponent } from './lifecyclehook/lifecyclehook.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { HttpClientModule } from '@angular/common/http';
+//import { SharedModule } from './shared/shared.module';
+//import { ApicallComponent } from './apicall/apicall.component';
 
 
 
@@ -24,6 +26,8 @@ import { ChildComponent } from './child/child.component';
     LifecyclehookComponent,
     ParentComponent,
     ChildComponent,
+    
+   // ApicallComponent,
    
   ],
   imports: [
@@ -31,6 +35,8 @@ import { ChildComponent } from './child/child.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

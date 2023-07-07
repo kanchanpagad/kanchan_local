@@ -60,5 +60,12 @@ child(){
 back(){
   this.router.navigateByUrl('/landing')
 }
+apicall(){
+  this.router.navigateByUrl('user/apicall')
+}
+getapicall(){
+  console.log('get method calling')
+  
+}
 
 }

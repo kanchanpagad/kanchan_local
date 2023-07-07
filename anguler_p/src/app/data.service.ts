@@ -9,6 +9,13 @@ export class DataService {
   studentData: { name: string; age: number; } | undefined;
   setData!: string;
 
+  whiteSpaceValidator(name:any){
+    let data = name.value;
+    let newdata = data?.trim();
+    let isValid = data.length != newdata.length ;
+    return isValid ? {whiteSpace:true} : null
+  }
+
   constructor() { }
   
 }
