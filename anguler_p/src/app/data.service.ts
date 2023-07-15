@@ -6,8 +6,10 @@ import { Injectable } from '@angular/core';
 export class DataService {
   userName:string ='ppp';
   listData:any;
-  studentData: { name: string; age: number; } | undefined;
+  studentData:any;
   setData!: string;
+  listOfUsers:any;
+  data: any;
 
   whiteSpaceValidator(name:any){
     let data = name.value;

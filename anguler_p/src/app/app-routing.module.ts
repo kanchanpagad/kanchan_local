@@ -10,6 +10,7 @@ import { DirectivesInAngularComponent } from './directives-in-angular/directives
 import { LifecyclehookComponent } from './lifecyclehook/lifecyclehook.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { FormComponent } from './form/form.component';
 
 const routes: Routes = [
   {path :'',component :LandingComponent},
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path : 'lifecyclehook', component:LifecyclehookComponent},
   {path :'parent',component : ParentComponent},
   {path : 'child',component :ChildComponent },
+  { path:'form', component: FormComponent},
   
 ]; 
 

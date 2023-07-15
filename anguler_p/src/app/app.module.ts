@@ -11,6 +11,11 @@ import { LifecyclehookComponent } from './lifecyclehook/lifecyclehook.component'
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormComponent } from './form/form.component';
+import { CharOnlyDirective } from './char-only.directive';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+//import { SharedModule } from './shared/shared.module';
+//import { MatButtonModule } from '@angular/material/button';
 //import { SharedModule } from './shared/shared.module';
 //import { ApicallComponent } from './apicall/apicall.component';
 
@@ -26,6 +31,9 @@ import { HttpClientModule } from '@angular/common/http';
     LifecyclehookComponent,
     ParentComponent,
     ChildComponent,
+    FormComponent,
+    CharOnlyDirective,
+    
     
    // ApicallComponent,
    
@@ -35,7 +43,11 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    //SharedModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+
+
   
   ],
   providers: [],

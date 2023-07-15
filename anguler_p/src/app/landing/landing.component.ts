@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { DataService } from '../data.service';
+import { CommonApilCallService } from '../user/common-apil-call.service';
 
 @Component({
   selector: 'app-landing',
@@ -10,8 +11,12 @@ import { DataService } from '../data.service';
 export class LandingComponent {
   uName!:string;
   list!:any;
+  getApiResponse!:any ;
+  dataS: { name: string; age: number; } | undefined;
+  studentsData:any;
+  
   constructor(private router :Router, 
-    private dataService:DataService ){
+    private dataService:DataService , private commonapicallservice :CommonApilCallService){
 
 
   }
@@ -32,6 +37,18 @@ signup(){
 }
 signin(){
   this.router.navigateByUrl('/signin')
+  
+}
+show(){
+  this.dataS = this.dataService.studentData; 
+  console.log(this.dataService);
+  //JSON.stringify()
+  let strigiFyedData = JSON.stringify(this.dataService);
+  console.log('stringifyedData',strigiFyedData);
+
+ //JSON.parse()
+ let parsedData = JSON.parse(strigiFyedData );
+ console.log('parsedData>>',parsedData);
   
 }
 
@@ -60,12 +77,31 @@ child(){
 back(){
   this.router.navigateByUrl('/landing')
 }
+
+form(){
+  this.router.navigateByUrl('/form')
+}
+
+
+
+
 apicall(){
   this.router.navigateByUrl('user/apicall')
 }
-getapicall(){
-  console.log('get method calling')
-  
-}
+getCall(){
+  console.log('get api calling');
+  let endpoint = 'admin';
+this.commonapicallservice.getApiCall(endpoint).subscribe(response =>{
+this.getApiResponse = response;
+  })
+   console.log(" this.getApiResponse", this.getApiResponse);
+  }
+  delete(){
+    this.commonapicallservice.deletApiCall('admin',2).subscribe((resp: any)=>{
+     console.log('delet respo', resp);
+     
+    })
+ }
 
 }
+

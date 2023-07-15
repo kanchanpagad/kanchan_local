@@ -4,7 +4,7 @@
     <form class="signup-form-container" [formGroup]="signUpForm">
 
         <label>Name</label><br>
-        <input type="text" formControlName="fullName"><br>
+        <input type="text" formControlName="fullName" appDirective maxlength="20" ><br>
         <span *ngIf="!signUpForm.get('fullName')?.touched 
          && !signUpForm.get('fullName')?.valid
          && !signUpForm.get('fullName')?.dirty">Hint:Enter Your Full Name here</span>
@@ -52,6 +52,11 @@
         <label>Address</label><br>
         <input type="text" formControlName="address"><br>
 
+        <label>Password</label><br>
+        <input type="text" formControlName="password"><br>
+
+        <label>Confirm Password</label><br>
+        <input type="text" formControlName="confirmPassword"><br>
         <br><br>
         <button [disabled]="!signUpForm.valid" (click)="submit()"> Submit </button>
     </form>
