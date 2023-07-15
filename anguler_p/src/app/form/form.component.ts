@@ -66,7 +66,7 @@ export class FormComponent {
   searchBoxValue(){
     this.searchBoxValue = this.inp;
   }
-
+       
 
 
 }
