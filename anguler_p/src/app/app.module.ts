@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormComponent } from './form/form.component';
 import { CharOnlyDirective } from './char-only.directive';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FilterPipe } from './filter.pipe';
 //import { SharedModule } from './shared/shared.module';
 //import { MatButtonModule } from '@angular/material/button';
 //import { SharedModule } from './shared/shared.module';
@@ -33,6 +34,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ChildComponent,
     FormComponent,
     CharOnlyDirective,
+    FilterPipe,
     
     
    // ApicallComponent,
