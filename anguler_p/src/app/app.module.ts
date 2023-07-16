@@ -15,10 +15,9 @@ import { FormComponent } from './form/form.component';
 import { CharOnlyDirective } from './char-only.directive';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FilterPipe } from './filter.pipe';
-//import { SharedModule } from './shared/shared.module';
 import { MatButtonModule } from '@angular/material/button';
-import { SharedModule } from './shared/shared.module';
-//import { SharedModule } from './shared/shared.module';
+import { CommonsharedModule } from './commonshared/commonshared.module';
+
 //import { ApicallComponent } from './apicall/apicall.component';
 
 
@@ -47,10 +46,12 @@ import { SharedModule } from './shared/shared.module';
     AppRoutingModule,
    FormsModule,
    ReactiveFormsModule,
-    SharedModule,
+     //SharedModule,
     HttpClientModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    CommonsharedModule,
+
 
   
   ],
@@ -58,5 +59,6 @@ import { SharedModule } from './shared/shared.module';
   bootstrap: [AppComponent]
 })
 export class AppModule {
+
   
  }

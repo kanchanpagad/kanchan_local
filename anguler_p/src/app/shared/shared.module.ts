@@ -15,11 +15,13 @@ import {MatButtonModule} from '@angular/material/button';
 
 
   imports: [CommonModule,  
+    CommonModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatButtonModule,    
-  
+    MatButtonModule,
+    //MatCheckboxModule,
+    //MatInputModule,
   
     
   ],
@@ -28,7 +30,10 @@ import {MatButtonModule} from '@angular/material/button';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    //NumbersOnlyDirective,
     MatButtonModule,
+    //MatCheckboxModule,
+    //MatInputModule
     
   ]
 })
