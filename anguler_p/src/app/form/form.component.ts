@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { CommonApilCallService } from '../user/common-apil-call.service';
 
+
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
@@ -17,7 +18,7 @@ export class FormComponent {
    todayDate = new Date();
    searchBoxVal:any;
   inputValue:any
-  constructor(private fb : FormBuilder, 
+  constructor (private fb : FormBuilder, 
    private commonApiCallService: CommonApilCallService,
    private httpClient : HttpClient){}
 

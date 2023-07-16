@@ -3,18 +3,22 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserdemoComponent } from '../user/userdemo/userdemo.component';
 import { HttpClientModule } from '@angular/common/http';
+import {MatButtonModule} from '@angular/material/button';
 
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    UserdemoComponent
+  ],
 
 
-  imports: [CommonModule,
+  imports: [CommonModule,  
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    MatButtonModule,    
   
   
     
@@ -24,7 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-   
+    MatButtonModule,
     
   ]
 })
