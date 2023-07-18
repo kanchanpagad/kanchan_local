@@ -17,6 +17,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FilterPipe } from './filter.pipe';
 import { MatButtonModule } from '@angular/material/button';
 import { CommonsharedModule } from './commonshared/commonshared.module';
+import { Subject1Component } from './subject1/subject1.component';
+import { Subject2Component } from './subject2/subject2.component';
+import { Subject3Component } from './subject3/subject3.component';
 
 //import { ApicallComponent } from './apicall/apicall.component';
 
@@ -35,6 +38,9 @@ import { CommonsharedModule } from './commonshared/commonshared.module';
     FormComponent,
     CharOnlyDirective,
     FilterPipe,
+    Subject1Component,
+    Subject2Component,
+    Subject3Component,
     
     
     

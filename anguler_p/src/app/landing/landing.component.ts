@@ -102,6 +102,9 @@ this.getApiResponse = response;
      
     })
  }
+ subject(){
+  this.router.navigateByUrl('subject1')
+ }
 
 }
 

@@ -11,19 +11,26 @@ import { LifecyclehookComponent } from './lifecyclehook/lifecyclehook.component'
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { FormComponent } from './form/form.component';
+import { Subject1Component } from './subject1/subject1.component';
+import { Subject2Component } from './subject2/subject2.component';
 
 const routes: Routes = [
   {path :'',component :LandingComponent},
   {path: 'landing',component:LandingComponent},
   {path:'login',component:LoginComponent},
   {path:'signup',component:SignupComponent},
-  
-  {path:'user',loadChildren:()=>import('./user/user.module').then(mod=>mod.UserModule)},
   { path : 'directives', component: DirectivesInAngularComponent},
   {path : 'lifecyclehook', component:LifecyclehookComponent},
   {path :'parent',component : ParentComponent},
   {path : 'child',component :ChildComponent },
   { path:'form', component: FormComponent},
+  { path:'subject1', component: Subject1Component},
+  { path:'subject2', component: Subject2Component},
+
+  
+  
+  {path:'user',loadChildren:()=>import('./user/user.module').then(mod=>mod.UserModule)},
+  
   
 ]; 
 
