@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CommonApilCallService } from '../user/common-apil-call.service';
 
 
@@ -18,6 +18,10 @@ export class FormComponent {
    todayDate = new Date();
    searchBoxVal:any;
   inputValue:any
+  matForm !: any;
+  
+  showPassword : boolean = false;
+  showConfirmPassword: boolean = false;
   constructor (private fb : FormBuilder, 
    private commonApiCallService: CommonApilCallService,
    private httpClient : HttpClient){}
@@ -26,7 +30,7 @@ export class FormComponent {
    console.log('...');
    this.myForm();
    this.getData();
-   
+   this.matFormDetails();
   }
 
    myForm(){
@@ -67,7 +71,26 @@ export class FormComponent {
   searchBoxValue(){
     this.searchBoxValue = this.inp;
   }
-       
+  matFormDetails(){
+    this.matForm = this.fb.group({
+      firstName : ['',[Validators.required, Validators.pattern('[a-zA-Z]*$'),Validators.minLength(2)]],
+      middleName : ['',[Validators.required]],
+      lastName : ['',[Validators.required]],
+      password:['',[Validators.required]],
+      confirmPassword:['',[Validators.required]]
+    })
+  }
+  // visibilePassword(){
+  //   this.showPassword =  !this.showPassword;
+    
+   
+    
+  // }
+  // visibileConfirmPassword(){
+  //   //this.confirmPasswordField = this.matForm.value.confirmPassword;
+  //   this.showConfirmPassword = !this.showConfirmPassword;
+  //  // this.passwordField == this.confirmPasswordField ? this.ConfirmPasswordMatch=true : this.ConfirmPasswordMatch = false;
+  // }
 
 
 }

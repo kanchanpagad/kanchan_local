@@ -4,6 +4,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserdemoComponent } from '../user/userdemo/userdemo.component';
 import { HttpClientModule } from '@angular/common/http';
 import {MatButtonModule} from '@angular/material/button';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatInputModule} from '@angular/material/input';
+import {MatIconModule} from '@angular/material/icon';
 
 
 
@@ -20,8 +23,9 @@ import {MatButtonModule} from '@angular/material/button';
     ReactiveFormsModule,
     HttpClientModule,
     MatButtonModule,
-    //MatCheckboxModule,
-    //MatInputModule,
+    MatCheckboxModule,
+    MatInputModule,
+    MatIconModule,
   
     
   ],
@@ -32,8 +36,8 @@ import {MatButtonModule} from '@angular/material/button';
     HttpClientModule,
     //NumbersOnlyDirective,
     MatButtonModule,
-    //MatCheckboxModule,
-    //MatInputModule
+    MatCheckboxModule,
+    MatInputModule
     
   ]
 })

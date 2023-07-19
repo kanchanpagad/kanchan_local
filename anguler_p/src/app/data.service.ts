@@ -13,7 +13,7 @@ export class DataService {
   data: any;
   name = new Subject<string>();
 
-  whiteSpaceValidator(name:any){
+  whiteSpaceValidator(name:any){   
     let data = name.value;
     let newdata = data?.trim();
     let isValid = data.length != newdata.length ;

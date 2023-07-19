@@ -16,14 +16,17 @@ import { CharOnlyDirective } from './char-only.directive';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FilterPipe } from './filter.pipe';
 import { MatButtonModule } from '@angular/material/button';
-import { CommonsharedModule } from './commonshared/commonshared.module';
 import { Subject1Component } from './subject1/subject1.component';
 import { Subject2Component } from './subject2/subject2.component';
 import { Subject3Component } from './subject3/subject3.component';
+import { SharedModule } from './shared/shared.module';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
+import { Parent1Component } from './parent1/parent1.component';
+import { Child1Component } from './child1/child1.component';
+
 
 //import { ApicallComponent } from './apicall/apicall.component';
-
-
 
 @NgModule({
   declarations: [
@@ -41,10 +44,9 @@ import { Subject3Component } from './subject3/subject3.component';
     Subject1Component,
     Subject2Component,
     Subject3Component,
-    
-    
-    
-   // ApicallComponent,
+    Parent1Component,
+    Child1Component,
+  // ApicallComponenst,
    
   ],
   imports: [
@@ -52,11 +54,15 @@ import { Subject3Component } from './subject3/subject3.component';
     AppRoutingModule,
    FormsModule,
    ReactiveFormsModule,
-     //SharedModule,
+     SharedModule,
     HttpClientModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    CommonsharedModule,
+    MatInputModule,
+    MatIconModule,
+  
+
+    
 
 
   
