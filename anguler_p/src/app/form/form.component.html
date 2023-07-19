@@ -13,14 +13,15 @@
 
 <div>
     <input type="text" placeholder="Search here..."[(ngModel)]="inputValue" (keyup)="inptVal($event)">
-    <button (click)="searchBoxValue()">Search</button>
+  
+    <button (click)="searchBoxValue ()">Search</button>
 
 <div *ngIf = "adminData" class="table-container">
     <table>
      <tr>                                                                                               
         <th *ngFor ="let heading of tableHeading"> {{heading}} </th>
      </tr>
-     <tr *ngFor ="let tableData of adminData | filter : searchBoxVal">
+     <tr *ngFor ="let tableData of adminData">
         <td>{{tableData.fullName}}</td>
         <td>{{tableData.mobNo}}</td>
         <td>{{tableData.city}}</td>
@@ -31,15 +32,16 @@
 <div>
     <div>
         {{myName | uppercase }} <br>   
+        
         {{myName | lowercase }}
-        <!-- {{ todayDate | date | uppercase}} multiple pipe examp-->
+        
     </div>
     
     <div>
         {{todayDate}} <br>
-        {{todayDate | date }} <br>
-        {{todayDate | date:'shortDate' }} <br>
-        {{todayDate | date:'fullDate' }} (IST)
+        {{todayDate | date }} <br><br>
+        {{todayDate | date:'shortDate'}} <br>
+        {{todayDate | date:'fullDate'}} (IST)
     </div>
     <br>
 

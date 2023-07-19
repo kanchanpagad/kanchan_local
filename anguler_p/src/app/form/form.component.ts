@@ -22,6 +22,9 @@ export class FormComponent {
   
   showPassword : boolean = false;
   showConfirmPassword: boolean = false;
+  confirmPasswordField: any;
+  passwordField: any;
+  ConfirmPasswordMatch!: boolean;
   constructor (private fb : FormBuilder, 
    private commonApiCallService: CommonApilCallService,
    private httpClient : HttpClient){}
@@ -31,7 +34,7 @@ export class FormComponent {
    this.myForm();
    this.getData();
    this.matFormDetails();
-  }
+  }   
 
    myForm(){
      this.form = this.fb.group({
@@ -53,14 +56,15 @@ export class FormComponent {
    }
 
    getData(){
-     let endpointToGetData = 'admin';
-     this.commonApiCallService.getApiCall(endpointToGetData).subscribe(data =>{
+     let endpointToGetData = 'profile';
+     this.commonApiCallService.getApiCall(endpointToGetData).subscribe(data =>{   
      console.log('get data',data);
      this.adminData = data;
    });
    
     
    }
+
 
    inptVal(val:any){
     console.log('val',val.target.value);
@@ -80,17 +84,17 @@ export class FormComponent {
       confirmPassword:['',[Validators.required]]
     })
   }
-  // visibilePassword(){
-  //   this.showPassword =  !this.showPassword;
+  visibilePassword(){
+    this.showPassword =  !this.showPassword;
     
    
     
-  // }
-  // visibileConfirmPassword(){
-  //   //this.confirmPasswordField = this.matForm.value.confirmPassword;
-  //   this.showConfirmPassword = !this.showConfirmPassword;
-  //  // this.passwordField == this.confirmPasswordField ? this.ConfirmPasswordMatch=true : this.ConfirmPasswordMatch = false;
-  // }
+  }
+  visibileConfirmPassword(){
+    this.confirmPasswordField = this.matForm.value.confirmPassword;
+    this.showConfirmPassword = !this.showConfirmPassword;
+    this.passwordField == this.confirmPasswordField ? this.ConfirmPasswordMatch=true : this.ConfirmPasswordMatch = false;
+  }
 
 
 }
