@@ -1,0 +1,71 @@
+{
+  "admin": [],
+  "user": [],
+  "owner": [
+    {
+      "UserName": "kanchan",
+      "Email": "kanchanpagad123@gmail.com",
+      "Mobile": "9266653990",
+      "Password": "kanchan@123",
+      "Gender": "female",
+      "id": 1
+    },
+    {
+      "UserName": "shrya",
+      "Email": "shrya111@gmail.com",
+      "Mobile": "8825358899",
+      "Password": "shrya",
+      "Gender": "female",
+      "id": 2
+    },
+    {
+      "UserName": "shri",
+      "Email": "shri99@gmail.com",
+      "Mobile": "7520333654",
+      "Password": "shri",
+      "Gender": "male",
+      "id": 3
+    },
+    {
+      "UserName": "kishor",
+      "Email": "kishor1493@gmail.com",
+      "Mobile": "9890453210",
+      "Password": "kishor@123",
+      "Gender": "male",
+      "id": 4
+    },
+    {
+      "UserName": "Sonali",
+      "Email": "Sonali786@gmail",
+      "Mobile": "6348989898",
+      "Password": "Sonali@123",
+      "Gender": "male",
+      "id": 5
+    },
+    {
+      "UserName": "kanchan suresh pagad",
+      "Email": "kanchanpagad111@gmail",
+      "Mobile": "+917058461353",
+      "Password": "kancghan@1234",
+      "Gender": "female",
+      "id": 6
+    },
+    {
+      "UserName": "kanchan suresh pagad",
+      "Email": "kanchanpagad111@gmail",
+      "Mobile": "+917058461353",
+      "Password": "kancghan@1234",
+      "Gender": "female",
+      "id": 7
+    },
+    {
+      "UserName": "kanchan suresh pagad",
+      "Email": "kanchanpagad111@gmail",
+      "Mobile": "+917058461353",
+      "Password": "kanchan@1234",
+      "Gender": "female",
+      "id": 8
+    }
+  ],
+  "hotelDetails": []
+}
