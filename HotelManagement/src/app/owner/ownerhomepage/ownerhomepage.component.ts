@@ -13,7 +13,7 @@ export class OwnerhomepageComponent {
 
   loginForm!:FormGroup;
   endPoint!:string;
-  ownerData : any;
+  ownerData! : any;
   validUser: boolean = false;
   
   constructor(private router: Router,
@@ -38,15 +38,17 @@ export class OwnerhomepageComponent {
 
 
   login() {
-    console.log(this.loginForm.value);
-    this.getOwnerApiData();
-    console.log('this.ownerData', this.ownerData);
+    if(this.loginForm.value.userName ){
+      this.commonService.userName = this.loginForm.value.userName ;
+   }
+   this.getOwnerApiData();
+   console.log('this.ownerData', this.ownerData);
 
     if (this.ownerData) {
        this.isValidUser();
       if (this.validUser) {
   
-  this.router.navigateByUrl('owner/ ownerSuccess');
+  this.router.navigateByUrl('owner/ownerSuccess');
       }
       else {
         this.router.navigateByUrl('owner/ownerhomepage');

@@ -7,8 +7,6 @@ import { SharedModule } from '../common/shared/shared.module';
 import { OwnerSignUpComponent } from './owner-sign-up/owner-sign-up.component';
 import { OwnerSuccsessComponent } from './owner-succsess/owner-succsess.component';
 
-import { OwnerhomeComponent } from './ownerhome/ownerhome.component';
-
 
 @NgModule({
   declarations: [

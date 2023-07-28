@@ -30,10 +30,11 @@ export class OwnerSignUpComponent {
 
   FormDetails(){
     this.signUpForm = this.fb.group({
-      name:['',[]],
-      email:['',[]],
-      mobile:['',[]],
-      password:['',[]],
+      username :['',[Validators.required,Validators.minLength(5),Validators.pattern('[a-zA-Z ]*'),this.commonservice.whiteSpaceValidator]],
+      email:['',[ Validators.required,Validators.minLength(10),Validators. pattern('[a-z]*')]],
+      Pancardnumber:['',[Validators.required,Validators. pattern('[a-zA-Z]){5}([0-9]){4}([a-zA-Z]){1}?$*')]],
+      mobile:['',[Validators.required,Validators.pattern('[0-9]*$')]],
+      password:['',[ Validators.pattern,Validators.minLength(8),('^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$')]],
       gender:['',[]],
       
 
@@ -41,7 +42,7 @@ export class OwnerSignUpComponent {
   }
   submit(){
     let request = {
-      UserName : this.signUpForm.value.name,
+  
       Email:   this.signUpForm.value.email,
       PancardNumber:this.signUpForm.value.PancardNumber,
       Mobile :  this.signUpForm.value.mobile,
